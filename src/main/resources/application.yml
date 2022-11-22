@@ -1,6 +1,3 @@
 spring:
-  config:
-    import: aws.yml
-
   jpa:
     open-in-view: false

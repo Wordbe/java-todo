@@ -18,4 +18,9 @@ public class ImageController {
     public String getPresignedUrl(@RequestBody ImageRequest request) {
         return s3Client.getImageUrl(request.filename(), LocalDateTime.now());
     }
+
+    @PostMapping("/upload-presigned-url")
+    public String getUploadPresignedUrl(@RequestBody ImageRequest request) {
+        return s3Client.getUploadImageUrl(request.filename(), LocalDateTime.now());
+    }
 }
