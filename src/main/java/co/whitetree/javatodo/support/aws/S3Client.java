@@ -2,7 +2,7 @@ package co.whitetree.javatodo.support.aws;
 
 import co.whitetree.javatodo.support.utils.LocalDateTimeUtils;
 import com.amazonaws.HttpMethod;
-import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
@@ -22,7 +22,7 @@ public class S3Client {
     public S3Client() {
         this.amazonS3 = AmazonS3ClientBuilder.standard()
                 .withRegion(Regions.AP_NORTHEAST_2)
-                .withCredentials(new ProfileCredentialsProvider())
+                .withCredentials(DefaultAWSCredentialsProviderChain.getInstance())
                 .build();
     }
 
