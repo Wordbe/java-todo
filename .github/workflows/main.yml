@@ -28,4 +28,4 @@ jobs:
     - name: Deploy springboot
       run: |
            chmod +x ./scripts/deploy.sh
-           ./scripts/deploy.sh
+           timeout 300s ./scripts/deploy.sh
