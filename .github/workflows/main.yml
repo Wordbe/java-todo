@@ -25,4 +25,6 @@ jobs:
       run: ./gradlew build --no-daemon
 
     - name: Deploy springboot
-      run: ./scripts/deploy.sh
+      run: |
+           chmod +x ./scripts/deploy.sh
+           ./scripts/deploy.sh
