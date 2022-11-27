@@ -19,5 +19,5 @@ jobs:
 
     - name: Start springboot
       run: |
-           chmod +x ./scripts/deploy.sh
-           timeout 300s ./scripts/deploy.sh
+           chmod +x ./scripts/springboot.sh
+           timeout 300s ./scripts/springboot.sh
