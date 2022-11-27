@@ -22,9 +22,9 @@ jobs:
         cache: 'gradle'
   
     - name: Execute gradle build
-    - run: ./gradlew build --no-daemon
+      run: ./gradlew build --no-daemon
 
     - name: Deploy springboot
-    - run: |
+      run: |
            chmod +x ./scripts/deploy.sh
            ./scripts/deploy.sh
