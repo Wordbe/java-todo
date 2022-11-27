@@ -18,3 +18,5 @@ echo "log path: $REPO/$PROJECT.log "
 
 # When nohup errors, output errors to log file
 nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &
+echo "nohup java -jar ""$JAR"" > $REPO/$PROJECT.log 2>&1 &"
+pgrep -a "$PROJECT"

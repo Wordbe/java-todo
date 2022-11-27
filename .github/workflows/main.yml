@@ -13,19 +13,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-
-# use only when first execute
-#    - name: Setup java
-#      uses: actions/setup-java@v3
-#      with:
-#        distribution: 'temurin'
-#        java-version: '17'
-#        cache: 'gradle'
   
     - name: Execute gradle build
-      run: ./gradlew build -x test
+      run: ./gradlew build --no-daemon
 
-    - name: Deploy springboot
+    - name: Start springboot
       run: |
            chmod +x ./scripts/deploy.sh
            timeout 300s ./scripts/deploy.sh
