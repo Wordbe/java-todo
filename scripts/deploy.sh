@@ -1,13 +1,11 @@
 #!/bin/bash
 
-REPO=/home/ec2-user/app/step1
+REPO=/home/ec2-user/actions-runner/_work/java-todo
 PROJECT=java-todo
 
-# CURR_PID=$(pgrep -f ${PROJECT}.*.jar)
-CURR_PID=$(pgrep -f java)
-
+CURR_PID=$(pgrep -f ${PROJECT}.*.jar)
 if [ -n "$CURR_PID" ]; then
-  echo "alreay running java process ---> kill -15 $CURR_PID"
+  echo "already running java process ---> kill -15 $CURR_PID"
   kill -15 "$CURR_PID"
   sleep 8
 fi
