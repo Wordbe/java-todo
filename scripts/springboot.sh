@@ -18,5 +18,5 @@ echo "log path: $REPO/$PROJECT.log"
 
 # When nohup errors, output errors to log file
 echo "nohup java -jar $JAR > $REPO/$PROJECT.log 2>&1 &"
+RUNNER_TRACKING_ID="" # prevent the github action from cleaning up orphan processes
 nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &
-sleep 3
