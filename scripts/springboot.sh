@@ -17,7 +17,9 @@ echo "application start: $JAR"
 echo "log path: $REPO/$PROJECT.log"
 
 # When nohup errors, output errors to log file
-nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &
-echo "nohup java -jar $JAR > $REPO/$PROJECT.log 2>&1 &"
-pgrep -a java
-pgrep -a $PROJECT
+java -jar "$JAR" > $REPO/$PROJECT.log 2>&1
+echo "java -jar $JAR > $REPO/$PROJECT.log 2>&1"
+#nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &
+#echo "nohup java -jar $JAR > $REPO/$PROJECT.log 2>&1 &"
+ps -ef | grep java
+ps -ef | grep $PROJECT
