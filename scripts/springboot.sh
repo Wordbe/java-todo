@@ -16,7 +16,5 @@ JAR=$(ls -S $REPO/$PROJECT/build/libs/*.jar | head -n 1)
 echo "application start: $JAR"
 echo "log path: $REPO/$PROJECT.log"
 
-# prevent the github action from cleaning up orphan processes
-RUNNER_TRACKING_ID=""
 # When nohup errors, output errors to log file
 nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &

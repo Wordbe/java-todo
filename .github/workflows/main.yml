@@ -19,5 +19,6 @@ jobs:
 
     - name: Start springboot
       run: |
+           RUNNER_TRACKING_ID="" # Prevent the github action from cleaning up orphan processes (background)
            chmod +x ./scripts/springboot.sh
            timeout 300s ./scripts/springboot.sh
