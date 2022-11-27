@@ -15,11 +15,5 @@ JAR=$(ls -S $REPO/$PROJECT/build/libs/*.jar | head -n 1)
 
 echo "application start: $JAR"
 echo "log path: $REPO/$PROJECT.log"
-
-# When nohup errors, output errors to log file
-java -jar "$JAR" > $REPO/$PROJECT.log 2>&1
-echo "java -jar $JAR > $REPO/$PROJECT.log 2>&1"
-#nohup java -jar "$JAR" > $REPO/$PROJECT.log 2>&1 &
-#echo "nohup java -jar $JAR > $REPO/$PROJECT.log 2>&1 &"
-ps -ef | grep java
-ps -ef | grep $PROJECT
+echo "java -jar $JAR > $REPO/$PROJECT.log"
+java -jar "$JAR" > $REPO/$PROJECT.log
