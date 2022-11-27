@@ -15,5 +15,5 @@ JAR=$(ls -S $REPO/$PROJECT/build/libs/*.jar | head -n 1)
 
 echo "application start: $JAR"
 echo "log path: $REPO/$PROJECT.log"
-echo "java -jar $JAR > $REPO/$PROJECT.log"
-java -jar "$JAR" > $REPO/$PROJECT.log
+echo "java -jar $JAR &"
+java -jar "$JAR" &
