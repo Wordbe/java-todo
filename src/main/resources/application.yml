@@ -1,3 +1,16 @@
 spring:
   jpa:
     open-in-view: false
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mars
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG

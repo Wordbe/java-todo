@@ -1,8 +1,7 @@
 package co.whitetree.javatodo.support;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Component;
-
-import javax.servlet.http.HttpServletRequest;
 
 @Component
 public class Client {
