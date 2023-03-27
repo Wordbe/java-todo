@@ -13,4 +13,6 @@ public interface TodoRepository extends MongoRepository<Todo, String> {
     List<Todo> findAllByCreatedAtGreaterThanEqualAndCreatedAtLessThanEqual(LocalDateTime startAt, LocalDateTime endAt);
 
     List<Todo> findAllByCreatedAtBetween(Range<LocalDateTime> createdAt);
+
+
 }
